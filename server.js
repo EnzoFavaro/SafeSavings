@@ -1,21 +1,30 @@
-//Criando Servidor Local
+const express = require('express');
+const path = require('path');
 
-const http = require("http");
+const app = express();
 const port = 3000;
 
-const rotas = {
-    '/': 'SafeSavings',
-    '/login': 'Tela de Login',
-    '/cadastro': 'Tela de Cadastro',
-    '/checkout': 'Carrinho',
-    '/ranking': 'Ranking compradores'
-}
+app.use(express.static(path.join(__dirname, 'src')));
 
-const server = http.createServer((req,res) => {
-    res.writeHead(200, {'Content-Type': 'text/plain'});
-    res.end(rotas[req.url]);
-})
+//Rota Home 
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'src/home', 'home.html'));
+});
 
-server.listen(port, () => {
-    console.log(`Servidor escutando em http://localhost:${port}`);
-})
+// Rota Cadastro
+app.get('/cadastro', (req, res) => {
+  res.sendFile(path.join(__dirname, 'src/sign up', 'signup.html'));
+});
+
+// Rota Login
+app.get('/login', (req, res) => {
+  res.sendFile(path.join(__dirname, 'src/sign in', 'signin.html'));
+});
+
+// app.get('/checkout', (req, res) => {
+//   res.sendFile(path.join(__dirname, 'public/paginas', 'checkout.html'));
+// });
+
+app.listen(port, () => {
+  console.log(`Servidor escutando em http://localhost:${port}`);
+});
