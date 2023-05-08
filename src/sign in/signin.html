@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../sign in/sign in.css">
+    <script type="text/javascript" src="../../login.js"></script>
     <title>Login</title>
 </head>
 
@@ -29,10 +30,10 @@
                 </div>
                 <div class="box-body">
                     <label class="box-label" for="login">Login</label>
-                    <input class="box-input login" type="text" placeholder="Digite seu login">
+                    <input class="box-input login" type="text" id='login' placeholder="Digite seu login">
                     <label class="box-label" for="senha">Senha</label>
-                    <input class="box-input- senha" type="password" placeholder="Digite sua senha">
-                    <button class="box-btn-">Cadastrar</button>
+                    <input class="box-input- senha" type="password" id='senha' placeholder="Digite sua senha">
+                    <button class="box-btn-" onclick="logar();">Cadastrar</button>
                     <a class="box-link" href="./signup.html">Não tem conta? Faça seu cadastro!</a>
                 </div>
             </div>
