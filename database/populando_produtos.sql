@@ -1,4 +1,4 @@
-INSERT INTO Products (product_name, product_price, product_category, product_EE,product_class) VALUES 
+INSERT INTO products (product_name, price, category, efficiency ,EE_label) VALUES 
 ('AG6LM1', 500.00,"aquecedores" , 65,'B'),
 ('AG6NM1', 600.00,"aquecedores", 55, 'B'),
 ('AG8LM1', 700.00,"aquecedores", 80, 'A'),
@@ -19,7 +19,7 @@ INSERT INTO Products (product_name, product_price, product_category, product_EE,
 ('AG24ND1', 2000.00,"aquecedores", 95, 'A'),
 ('AG24LD1', 2100.00, "aquecedores", 100,'A');
 
-INSERT INTO  Products (product_name, product_price, product_category, product_EE,product_class) VALUES 
+INSERT INTO  products (product_name, price, category, efficiency ,EE_label) VALUES 
 ('Fogão EletroTop 4 bocas', 699.90, "fogao" ,80, 'A'),
 ('Fogão Elétrico Brastemp 5 bocas', 1200.00,"fogao" , 70, 'B'),
 ('Fogão Elétrico Mueller 4 bocas', 579.00, "fogao" ,50, 'B'),
@@ -42,29 +42,29 @@ INSERT INTO  Products (product_name, product_price, product_category, product_EE
 ('Fogão Elétrico Eletrolux 3 bocas', 599.00,"fogao" , 40, 'C');
 
 
-INSERT INTO Products (product_name, product_price, product_category, product_EE,product_class) VALUES
-('Brastemp BMX35', 599.99, 'forno microondas', 65.5, 'A'),
-('Electrolux MEC41', 419.9, 'forno microondas', 48.2, 'C'),
-('Panasonic NN-ST25', 349.9, 'forno microondas', 72.6, 'A'),
-('Consul CMA20', 299.9, 'forno microondas', 28.9, 'C'),
-('LG MS3052R', 399.99, 'forno microondas', 56.8, 'B'),
-('Samsung MS23F300EEW', 269.9, 'forno microondas', 62.1, 'A'),
-('Philco PMO26I', 379.99, 'forno microondas', 35.7, 'C'),
-('Midea Liva MTAS21', 239.99, 'forno microondas', 49.5, 'C'),
-('Oster OMS049', 289.9, 'forno microondas', 64.3, 'A'),
-('Suggar Forno Microondas 20L', 199.99, 'forno microondas', 27.4, 'C'),
-('Tramontina By Breville BMT405', 799.99, 'forno microondas', 81.5, 'A'),
-('Cuisinart CMW-200', 299.9, 'forno microondas', 70.8, 'A'),
-('Brastemp BMT45', 949.9, 'forno microondas', 73.2, 'A'),
-('Electrolux MEX55', 699.99, 'forno microondas', 48.6, 'C'),
-('LG MH7053R', 449.99, 'forno microondas', 57.9, 'B'),
-('Panasonic NN-ST254W', 379.99, 'forno microondas', 64.9, 'A'),
-('Consul CMO20', 299.99, 'forno microondas', 27.5, 'C'),
-('Samsung MS23J5133AK', 399.9, 'forno microondas', 56.3, 'B'),
-('Philco PMO21S', 249.9, 'forno microondas', 62.8, 'A'),
-('Midea Liva MTAS31', 299.9, 'forno microondas', 40.1, 'C');
+INSERT INTO products (product_name, price, category, efficiency ,EE_label) VALUES
+('Brastemp BMX35', 599, 'microondas', 65.5, 'A'),
+('Electrolux MEC41', 419, 'microondas', 48.2, 'C'),
+('Panasonic NN-ST25', 349, 'microondas', 72.6, 'A'),
+('Consul CMA20', 299, 'microondas', 28.9, 'C'),
+('LG MS3052R', 399, 'microondas', 56.8, 'B'),
+('Samsung MS23F300EEW', 269, 'microondas', 62.1, 'A'),
+('Philco PMO26I', 379, 'microondas', 35.7, 'C'),
+('Midea Liva MTAS21', 239, 'microondas', 49.5, 'C'),
+('Oster OMS049', 289, 'microondas', 64.3, 'A'),
+('Suggar microondas 20L', 199, 'microondas', 27.4, 'C'),
+('Tramontina By Breville BMT405', 799, 'microondas', 81.5, 'A'),
+('Cuisinart CMW-200', 299, 'microondas', 70.8, 'A'),
+('Brastemp BMT45', 949, 'microondas', 73.2, 'A'),
+('Electrolux MEX55', 699, 'microondas', 48.6, 'C'),
+('LG MH7053R', 449, 'microondas', 57.9, 'B'),
+('Panasonic NN-ST254W', 379, 'microondas', 64.9, 'A'),
+('Consul CMO20', 299, 'microondas', 27.5, 'C'),
+('Samsung MS23J5133AK', 399, 'microondas', 56.3, 'B'),
+('Philco PMO21S', 249, 'microondas', 62.8, 'A'),
+('Midea Liva MTAS31', 299, 'microondas', 40.1, 'C');
 
-INSERT INTO Products (product_name, product_price, product_category, product_EE,product_class) VALUES 
+INSERT INTO products (product_name, price, category, efficiency ,EE_label) VALUES 
 ('Lâmpada Estrela', 4.99, 'lampadas', 15, 'C'),
 ('Lâmpada Clássica', 7.99, 'lampadas',  40, 'B'),
 ('Lâmpada Espiral', 9.99, 'lampadas',  70, 'A'),
@@ -86,29 +86,29 @@ INSERT INTO Products (product_name, product_price, product_category, product_EE,
 ('Lâmpada Fluorescente', 5.99, 'lampadas',  25, 'C'),
 ('Lâmpada Mini Vela', 4.49, 'lampadas',  15, 'C');
 
-INSERT INTO Products (product_name, product_price, product_category, product_EE,product_class) VALUES
-('Electrolux LSE11', 3299.99, 'Máquina Lava e Seca', 85.6, 'A'),
-('Samsung WD4000', 3299.00, 'Máquina Lava e Seca', 78.3, 'B'),
-('Brastemp BWS24A', 3399.00, 'Máquina Lava e Seca', 64.7, 'B'),
-('LG Titan WD17VTS6', 3599.99, 'Máquina Lava e Seca', 90.5, 'A'),
-('Electrolux LST12', 3699.99, 'Máquina Lava e Seca', 82.1, 'A'),
-('Samsung WD6000', 3799.00, 'Máquina Lava e Seca', 70.2, 'B'),
-('LG Vivace FV1450S4W', 3999.99, 'Máquina Lava e Seca', 93.2, 'A'),
-('Brastemp BWR24A', 4199.00, 'Máquina Lava e Seca', 63.9, 'B'),
-('Electrolux LSW12', 4299.99, 'Máquina Lava e Seca', 79.5, 'A'),
-('LG All in One WD11WP6', 4499.99, 'Máquina Lava e Seca', 91.4, 'A'),
-('Samsung WD7000', 4599.00, 'Máquina Lava e Seca', 69.0, 'B'),
-('LG TWINWash FH4G1JCHK6N', 5599.99, 'Máquina Lava e Seca', 94.5, 'A'),
-('Brastemp BWK11AB', 5899.00, 'Máquina Lava e Seca', 60.2, 'C'),
-('Electrolux LSI11', 5999.99, 'Máquina Lava e Seca', 77.8, 'B'),
-('LG Smart Care WD17VTS7', 6199.99, 'Máquina Lava e Seca', 89.3, 'A'),
-('Samsung WD11M44733W', 6499.00, 'Máquina Lava e Seca', 73.1, 'B'),
-('LG Eco Hybrid FH695BDH6N', 6999.99, 'Máquina Lava e Seca', 96.7, 'A'),
-('Electrolux LSW15', 7999.99, 'Máquina Lava e Seca', 76.4, 'B'),
-('Samsung WD11K6410OX', 8499.00, 'Máquina Lava e Seca', 72.7, 'B');
+INSERT INTO products (product_name, price, category, efficiency ,EE_label) VALUES
+('Electrolux LSE11', 3299.99, 'lava e seca', 85.6, 'A'),
+('Samsung WD4000', 3299.00, 'lava e seca', 78.3, 'B'),
+('Brastemp BWS24A', 3399.00, 'lava e seca', 64.7, 'B'),
+('LG Titan WD17VTS6', 3599.99, 'lava e seca', 90.5, 'A'),
+('Electrolux LST12', 3699.99, 'lava e seca', 82.1, 'A'),
+('Samsung WD6000', 3799.00, 'lava e seca', 70.2, 'B'),
+('LG Vivace FV1450S4W', 3999.99, 'lava e seca', 93.2, 'A'),
+('Brastemp BWR24A', 4199.00, 'lava e seca', 63.9, 'B'),
+('Electrolux LSW12', 4299.99, 'lava e seca', 79.5, 'A'),
+('LG All in One WD11WP6', 4499.99, 'lava e seca', 91.4, 'A'),
+('Samsung WD7000', 4599.00, 'lava e seca', 69.0, 'B'),
+('LG TWINWash FH4G1JCHK6N', 5599.99, 'lava e seca', 94.5, 'A'),
+('Brastemp BWK11AB', 5899.00, 'lava e seca', 60.2, 'C'),
+('Electrolux LSI11', 5999.99, 'lava e seca', 77.8, 'B'),
+('LG Smart Care WD17VTS7', 6199.99, 'lava e seca', 89.3, 'A'),
+('Samsung WD11M44733W', 6499.00, 'lava e seca', 73.1, 'B'),
+('LG Eco Hybrid FH695BDH6N', 6999.99, 'lava e seca', 96.7, 'A'),
+('Electrolux LSW15', 7999.99, 'lava e seca', 76.4, 'B'),
+('Samsung WD11K6410OX', 8499.00, 'lava e seca', 72.7, 'B');
 
 
-INSERT INTO Products (product_name, product_price, product_category, product_EE,product_class)
+INSERT INTO products (product_name, price, category, efficiency ,EE_label)
 VALUES 
 ('Arno Silence Force VF40', 299.90, 'Ventilador', 70, 'A'),
 ('Mondial Turbo Action 4000', 139.90, 'Ventilador', 50, 'B'),
@@ -131,7 +131,7 @@ VALUES
 ('Cadence Breeze 40', 119.90, 'Ventilador', 35, 'B'),
 ('Arno Turbo Silencio Maxx TS55', 399.90, 'Ventilador', 80, 'A');
 
-INSERT INTO Products (product_name, product_price, product_category, product_EE,product_class) VALUES 
+INSERT INTO products (product_name, price, category, efficiency ,EE_label) VALUES 
     ('Samsung 4K Ultra HD', 2399.99,"televisores", 82.5, 'A'),
     ('LG LED Full HD', 1399.99,"televisores", 68.7, 'B'),
     ('Sony Smart TV OLED 4K', 3899.99,"televisores", 91.2, 'A'),
@@ -153,7 +153,7 @@ INSERT INTO Products (product_name, product_price, product_category, product_EE,
     ('Philips The One LED 4K', 2199.99,"televisores",72.9, 'B'),
     ('TCL Roku Smart TV LED 4K', 1499.99,"televisores", 59.6, 'B');
 
-INSERT INTO Products (product_name, product_price, product_category, product_EE,product_class) VALUES
+INSERT INTO products (product_name, price, category, efficiency ,EE_label) VALUES
 ('Brastemp Frost Free BRM45 403 litros', 2599.00,'geladeiras', 80, 'A'),
 ('Consul Frost Free CRM43NK 386 litros', 2249.00,'geladeiras',  75, 'A'),
 ('Electrolux Inox Frost Free TF56S 431 litros', 3599.00,'geladeiras',  85, 'A'),
