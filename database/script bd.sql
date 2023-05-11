@@ -4,7 +4,7 @@ use safe_savings;
 CREATE TABLE users 
 ( 
  user_id INT PRIMARY KEY AUTO_INCREMENT,  
- password VARCHAR(12) NOT NULL,
+ password VARCHAR(120) NOT NULL,
  user VARCHAR(20) NOT NULL,
  EE_rate FLOAT NOT NULL DEFAULT 0.0;
 ); 

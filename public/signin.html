@@ -5,19 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../sign in/sign in.css">
-    <script type="text/javascript" src="../../login.js"></script>
+    <link rel="stylesheet" href="css/signin.css">
     <title>Login</title>
 </head>
 
 <body>
     <div class="container">
         <header class="header">
-            <a href="home.html"><img class="logo"src="./images/logo-PI-white.svg" alt="logo-site"></a>
+            <a href="/"><img class="logo"src="./images/logo-PI-white.svg" alt="logo-site"></a>
             <div class="nav">
                 <a class="nav-link" href="">Produtos</a>
-                <a class="nav-link" href="/">Sobre nós</a>
-                <a class="nav-link" href="">Dicas</a>
                 <a class="nav-link" href="">Ranking</a>
             </div>
             <img class='quadrado'src="./images/quadrado-green.svg" alt="logo">
@@ -28,17 +25,20 @@
                 <div class="box-head">
                     <img class="logo2" src="./images/logo-sem-escrito.svg" alt="logo sem escrito">
                 </div>
+                <form onsubmit="return false;" id="form2" >
                 <div class="box-body">
                     <label class="box-label" for="login">Login</label>
-                    <input class="box-input login" type="text" id='login' placeholder="Digite seu login">
-                    <label class="box-label" for="senha">Senha</label>
-                    <input class="box-input- senha" type="password" id='senha' placeholder="Digite sua senha">
-                    <button class="box-btn-" onclick="logar();">Cadastrar</button>
-                    <a class="box-link" href="./signup.html">Não tem conta? Faça seu cadastro!</a>
+                    <input class="box-input login" type="text" id='user' placeholder="Digite seu login">
+                    <label class="box-label" for="password">Senha</label>
+                    <input class="box-input senha" type="password" id='password' placeholder="Digite sua senha">
+                    <input class="box-btn" type="submit" value="Cadastrar">
+                    <a class="box-link" href="/cadastro">Não tem conta? Faça seu cadastro!</a>
                 </div>
+                </form>
             </div>
         </section>
     </div>
+    <script type="text/javascript" src="/js/login.js"></script>
 </body>
 
 </html>

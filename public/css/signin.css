@@ -56,7 +56,7 @@ body{
     display: flex;
     flex-direction: column;
     background-image: url("images/imagemFundoPI 3.svg"); 
-    height: 1080px;
+    height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
 }
