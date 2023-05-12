@@ -1,3 +1,4 @@
+//endpoint da api para persistir os dados do usuario no banco
 const db = require("../routes/db-config");
 const bcrypt = require("bcryptjs")
 

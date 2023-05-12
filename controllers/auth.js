@@ -1,3 +1,4 @@
+//módulos de autorização do roteador
 const express = require("express");
 const router = express.Router();
 const register = require('./register');

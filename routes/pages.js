@@ -1,3 +1,4 @@
+//rota das páginas html
 const express = require("express");
 const router = express.Router();
 

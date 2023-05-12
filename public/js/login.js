@@ -1,3 +1,4 @@
+//captura os campos do formulário de login e envia para a api
 form2.addEventListener("submit", ()=>{
     const login = {
         user: user.value,
