@@ -1,3 +1,4 @@
+//rota das páginas html
 const express = require("express");
 const loggedIn = require("../controllers/loggedIn");
 const logout = require("../controllers/logout");

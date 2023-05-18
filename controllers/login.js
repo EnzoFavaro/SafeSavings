@@ -1,3 +1,4 @@
+//endpoint da api para consultar os dados no db, comparar com o inserido e autorizar o login
 const jwt = require("jsonwebtoken");
 const db = require("../routes/db-config");
 const bcrypt = require("bcryptjs");

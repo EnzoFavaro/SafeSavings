@@ -1,3 +1,4 @@
+//captura os campos do formulário de cadastro e envia para a api
 form.addEventListener("submit", ()=>{
     const register = {
         login: login.value,
