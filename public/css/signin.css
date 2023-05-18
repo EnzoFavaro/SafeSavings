@@ -55,10 +55,42 @@ body{
 .main{
     display: flex;
     flex-direction: column;
-    background-image: url("images/imagemFundoPI 3.svg"); 
+    background-image: url("images/imagemFundoPI3.svg"); 
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.section-popup{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.icon-popup{
+    width: 20px;
+}
+
+.popup{
+    border-radius: 20px;
+    background-color: white;
+    height: 40px;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.popup p{
+    position: relative;
+    top: -23px;
+    padding-left: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.link-icon-back{
+    width: 90px;
 }
 
 .icon-back{
