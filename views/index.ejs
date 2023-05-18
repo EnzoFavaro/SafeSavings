@@ -20,8 +20,12 @@
             <div class="dropdown">
                 <img class="perfil-img" src="./images/perfil.svg" alt="ícone de perfil"></a>
                 <div class="dropdown-content">
-                    <a href="/login">Login</a>
-                    <a href="/cadastro">Cadastro</a>
+                    <%if (status == "LoggedIn"){%>
+                        <a href="/logout">Logout</a>
+                    <%}else{%>
+                        <a href="/login">Login</a>
+                        <a href="/cadastro">Cadastro</a>
+                    <%}%>
                 </div>
             </div>
         </header>

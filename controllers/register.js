@@ -5,13 +5,11 @@ const register = async (req, res) => {
     const {login, password: Npassword} = req.body;
     if(!login || !Npassword) return res.json({status: "error", error: "Digite seu email e senha!"});
     else{
-        console.log(login);
         db.query('SELECT user FROM users WHERE user = ?', [login], async (err, result) => {
             if(err) throw err;
             if(result[0]) return res.json({status : "error", error: "Esse login ja esta sendo utilizado"});
             else{
                 const password = await bcrypt.hash(Npassword, 8);
-                console.log(password);
                 db.query("INSERT INTO users SET ?", {user: login, password: password}, (error, results) =>{
                     if(error) throw error;
                     return res.json({status : "success", success: "Usuario cadastrado"});
