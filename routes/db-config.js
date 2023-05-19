@@ -1,4 +1,4 @@
-//confuguraçoes do banco de dados
+//configurações do banco de dados
 const sql = require('mysql');
 const dotenv = require('dotenv').config();
 const db = sql.createConnection({

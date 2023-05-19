@@ -104,6 +104,8 @@ body{
 .integrantes-foto{
     width: 200px;
     height: 170px;
+    border-radius: 15px;
+    border: 3px solid white;
 }
 
 .integrantes-texto{
@@ -163,10 +165,6 @@ body{
         margin-top: 30px;
         margin-bottom: 30px;
     }
-    /* .aux-texto{
-        margin: 0 auto;
-        text-align: center;
-    } */
 }
 
 @media(max-width: 500px){
@@ -185,43 +183,6 @@ body{
         flex-wrap: wrap;
     }
 }
-
-/* @media (min-width: 1440px){
-    .logo{
-        width: 400px;
-    }
-    .nav-link{
-        font-size: 30px;
-    }
-    .perfil-img{
-        width: 150px;
-    }
-    .perfil h3{
-        font-size: 30px;
-    }
-    .sobre-nos-titulo{
-        font-size: 80px;
-    }
-    .logo-empresa-img{
-        width: 400px;
-    }
-    .sobre-nos-texto{
-        font-size: 30px;
-        width: 1000px;
-    }
-    .integrantes-foto{
-        width: 400px;
-        height: 300px;
-    }
-    .integrantes-texto{
-        font-size: 30px;
-        width: 1000px;
-    }
-    .footer-texto{
-        font-size: 30px;
-    }
-} */
-
 
 .dropdown {
     position: relative;
@@ -244,10 +205,12 @@ body{
     text-decoration: none;
     display: block;
   }
+
  
   .dropdown-content a:hover {background-color: #f1f1f1}
   .dropdown:hover .dropdown-content {
     display: block;
   }
+
 
 

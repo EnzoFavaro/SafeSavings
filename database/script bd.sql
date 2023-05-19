@@ -3,10 +3,10 @@ use safe_savings;
 
 CREATE TABLE users 
 ( 
- user_id INT PRIMARY KEY AUTO_INCREMENT,  
- password VARCHAR(12) NOT NULL,
+ id INT PRIMARY KEY AUTO_INCREMENT,  
+ password VARCHAR(120) NOT NULL,
  user VARCHAR(20) NOT NULL,
- EE_rate FLOAT NOT NULL DEFAULT 0.0;
+ EE_rate FLOAT NOT NULL DEFAULT 0.0
 ); 
 
 CREATE TABLE products 
@@ -24,8 +24,8 @@ CREATE TABLE orders
  order_id INT PRIMARY KEY,  
  product_id INT NOT NULL,  
  quanitity INT NOT NULL,  
- user_id INT
+ id INT
 ); 
 
 ALTER TABLE orders ADD FOREIGN KEY(product_id) REFERENCES products (product_id);
-ALTER TABLE orders ADD FOREIGN KEY(user_id) REFERENCES users (user_id);
+ALTER TABLE orders ADD FOREIGN KEY(id) REFERENCES users (id);
