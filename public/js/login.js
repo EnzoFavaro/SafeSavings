@@ -13,7 +13,10 @@ form2.addEventListener("submit", ()=>{
     }).then(res => res.json())
     .then(data =>{
         if(data.status == "error"){
-            console.log("Erro ao acessar conta: "+ data.error)
+            error.style.display = "block"
+            error.innerText = data.error
+        }else{
+            window.location.replace("/");
         }
     })
 })

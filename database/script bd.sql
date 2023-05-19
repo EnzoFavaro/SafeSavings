@@ -24,8 +24,8 @@ CREATE TABLE orders
  order_id INT PRIMARY KEY,  
  product_id INT NOT NULL,  
  quanitity INT NOT NULL,  
- user_id INT
+ id INT
 ); 
 
 ALTER TABLE orders ADD FOREIGN KEY(product_id) REFERENCES products (product_id);
-ALTER TABLE orders ADD FOREIGN KEY(user_id) REFERENCES users (user_id);
+ALTER TABLE orders ADD FOREIGN KEY(id) REFERENCES users (id);

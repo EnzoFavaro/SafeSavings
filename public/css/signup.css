@@ -67,21 +67,40 @@ body{
     flex-wrap: wrap;
 }
 
-.icon-popup{
-    width: 20px;
-}
 
-.popup{
+
+.popup-success{
     border-radius: 20px;
-    background-color: white;
+    background-color: rgb(122, 255, 85);
+    font-weight: bold;
+    color: white;
     height: 40px;
     padding: 10px;
     margin-top: 10px;
-    cursor: pointer;
+    margin-right: 10px;
+    display: none;
+}
+.popup-error{
+    border-radius: 20px;
+    background-color: rgb(255, 20, 20);
+    font-weight: bold;
+    color: white;
+    height: 40px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    display: none;
+}
+
+.popup-error p{
+    position: relative;
+    top: -23px;
+    padding-left: 20px;
+    margin-left: 10px;
     margin-right: 10px;
 }
 
-.popup p{
+.popup-success p{
     position: relative;
     top: -23px;
     padding-left: 20px;
