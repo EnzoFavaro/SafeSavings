@@ -22,4 +22,8 @@ router.get("/cadastro", (req, res) =>{
 })
 router.get("/logout", logout)
 
+router.get("/produtos", (req, res) =>{
+    res.sendFile("produtos.html", {root:"./public"})
+})
+
 module.exports = router;
