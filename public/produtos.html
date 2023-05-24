@@ -25,15 +25,61 @@
                 </div>
             </div>
         </header>
-        <section class="main">
-            <div class="direcionamento">
-                <h1 class="frase-direcionamento">Descubra tudo sobre nós, SafeSavings.</h1>
-                <a href="">Sobre Nós</a>
+        <main class="main">
+            <div class="main-direcionamento">
+                <div class="direcionamento">
+                    <h1 class="frase-direcionamento">Descubra tudo sobre nós, SafeSavings.</h1>
+                    <a href="">Sobre Nós</a>
+                </div>
+                <div class="img-direcionamento">
+                    <img src="./images/logo-empresa.svg" alt="logo SafeSavings">
+                </div>
             </div>
-            <div class="img-direcionamento">
-                <img src="./images/logo-empresa.svg" alt="logo SafeSavings">
+            <div class="filtros">
+                <h2 class="titulo-filtros">Filtros</h2>
+                <h4 class="tipo-filtros">Categoria</h4>
+                <form class="form-filtros" action="">
+                    <div class="categoria">
+                        <input type="checkbox" name="aquecedores" id="aquecedores">
+                        <label for="aquecedores">Aquecedores</label>
+                        <br>
+                        <input type="checkbox" name="fogao" id="fogao">
+                        <label for="fogao">Fogão</label>
+                        <br>
+                        <input type="checkbox" name="microondas" id="microondas">
+                        <label for="microondas">Micro-ondas</label>
+                        <br>
+                        <input type="checkbox" name="lampadas" id="lampadas">
+                        <label for="lampadas">Lâmpadas</label>
+                        <br>
+                        <input type="checkbox" name="lavaESseca" id="lavaESeca">
+                        <label for="lavaESeca">Lava e Seca</label>
+                        <br>
+                        <input type="checkbox" name="Ventilador" id="Ventilador">
+                        <label for="Ventilador">Ventilador</label>
+                        <br>
+                        <input type="checkbox" name="televisores" id="televisores">
+                        <label for="televisores">Televisores</label>
+                        <br>
+                        <input type="checkbox" name="geladeiras" id="geladeiras">
+                        <label for="geladeiras">Geladeiras</label>
+                    </div>
+                </form>
+                <h4 class="tipo-filtros">Eficiência energética</h4>
+                <form class="form-filtros" action="">
+                    <input type="radio" name="categoriaA" id="categoriaA">
+                    <label for="categoriaA">A</label>
+                    <br>
+                    <input type="radio" name="categoriaB" id="categoriaB">
+                    <label for="categoriaB">B</label>
+                    <br>
+                    <input type="radio" name="categoriaC" id="categoriaC">
+                    <label for="categoriaC">C</label>
+                    <br>
+                    <input class="btn-filtros" type="submit" value="Aplicar filtros">
+                </form>
             </div>
-        </section>
+        </main>
     </div>
 </body>
 
