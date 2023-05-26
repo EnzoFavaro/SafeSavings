@@ -39,7 +39,7 @@
                     <img src="./images/logo-empresa.svg" alt="logo SafeSavings">
                 </div>
             </div>
-            <div class="filtros">
+            <aside>
                 <h2 class="titulo-filtros">Filtros</h2>
                 <h4 class="tipo-filtros">Categoria</h4>
                 <form class="form-filtros" action="">
@@ -82,10 +82,16 @@
                     <br>
                     <input class="btn-filtros" type="submit" value="Aplicar filtros">
                 </form>
-            </div>
+            </aside>
+            <div class="products">
             <% products.forEach(product => { %>
-                    <img src="/images/<%= product.product_image %>"/>
-                    <h4><b><%= product.product_name %></b></h4>
+                <div class="product_item">
+                    <h3><b><%= product.product_name %></b></h3>
+                    <img src="./products/<%=product.category%>.png"/>
+                    <div class="product_info">
+                        <h4><b>R$<%= product.price %></b></h4>
+                        <h4><b>Selo: <%= product.EE_label %></b></h4>
+                    </div>
                     <form method="post" action="/add_cart">
                         <input type="hidden" name="product_id" value="<%= product.product_id %>" />
 
@@ -93,10 +99,12 @@
 
                         <input type="hidden" name="price" value="<%= product.price %>" />
 
-                        <input type="submit" class="btn btn-warning" value="Add to Cart" />
+                        <input type="submit" class="product-btn" value="Comprar" />
                     </form>
                 </div>
                 <% }) %>
+            </div>
+    </div>   
         </main>
     </div>
 </body>

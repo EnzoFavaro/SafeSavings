@@ -139,9 +139,7 @@ body {
   padding: 10px;
 }
 
-.filtros {
-  display: flex;
-  flex-direction: column;
+aside{
   gap: 10px;
   padding: 20px;
   background-color: rgba(57, 99, 4, 0.22);
@@ -149,6 +147,7 @@ body {
   flex-wrap: wrap;
   width: 200px;
   border-radius: 5px;
+  float: left;
 }
 
 .titulo-filtros {
@@ -205,4 +204,49 @@ body {
   }
 }
 
+.products{
+ margin-left: 250px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 200px;
+  margin-top: 20px;
+}
+
+.product_item{
+  border: 4px solid rgb(128, 128, 128);
+  width: 210px;
+  margin-left: 75px;
+  margin-bottom: 30px;
+  height: auto;
+  padding: 10px;
+}
+
+.product_item h3{
+  text-align: center;
+}
+
+.product_item img{
+  width: 150px;
+  height: 150px;
+  margin-left: 25px;
+}
+.product_info{
+  margin-top: 10px;
+  justify-content: space-between;
+  display: flex;
+}
+.product-btn{
+  background-color: #39422f;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  width: 150px;
+  margin-top: 15px;
+  margin-left: 15px;
+  height: 20px;
+}
+.product-btn:hover{
+  background-color: #343a2c;
+}
 
