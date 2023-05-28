@@ -39,14 +39,16 @@ app.use(session({
 }));
 
 app.get("/produtos",loggedIn ,fetchProducts,(req, res) =>{
-  if(req.user){
-    if(!req.session.cart)
-		{
-			req.session.cart = [];
-		}
+	if(!req.session.cart)
+	{
+		req.session.cart = [];
+	}
+	
+	if(req.user){
+    
       res.render("produtos", {status:"LoggedIn", user: req.user , products : req.products, cart : req.session.cart});
     } else{
-      res.render("produtos", {status:"Not loggedIn", user:"nothing" , products : result})
+      res.render("produtos", {status:"Not loggedIn", user:"nothing" , products : req.products, cart : req.session.cart})
     }
 
 })
@@ -54,7 +56,6 @@ app.get("/produtos",loggedIn ,fetchProducts,(req, res) =>{
 app.post('/add_cart', (request, response) => {
 
 	const product_id = request.body.product_id;
-  console.log(product_id)
 	const product_name = request.body.product_name;
 
 	const price = request.body.price;

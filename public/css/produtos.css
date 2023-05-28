@@ -142,7 +142,7 @@ body {
 aside{
   gap: 10px;
   padding: 20px;
-  background-color: rgba(57, 99, 4, 0.22);
+  background-color: #39630438;
   margin-top: 50px;
   flex-wrap: wrap;
   width: 200px;
@@ -224,10 +224,10 @@ aside{
   padding: 10px;
 }
 
-.product_item h3{
-  text-align: center;
+#prod_header{
+  display: flex;
+  justify-content: space-between;
 }
-
 .product_item img{
   width: 150px;
   height: 150px;
@@ -247,7 +247,7 @@ aside{
   width: 150px;
   margin-top: 15px;
   margin-left: 15px;
-  height: 20px;
+  height: 25px;
 }
 .product-btn:hover{
   background-color: #343a2c;
@@ -263,4 +263,19 @@ aside{
 
 .table, th, td{
   height: auto;
+}
+
+#btn_comprar{
+  background-color: #39422f;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  width: 95px;
+  height: 35px;
+  cursor: pointer;
+  
+}
+#comprar_container{
+  display: flex;
+  justify-content: end;
 }
