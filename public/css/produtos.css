@@ -147,6 +147,9 @@ aside{
   flex-wrap: wrap;
   width: 200px;
   border-radius: 5px;
+}
+
+.filtro{
   float: left;
 }
 
@@ -205,7 +208,7 @@ aside{
 }
 
 .products{
- margin-left: 250px;
+  margin-left: 250px;
   display: flex;
   flex-wrap: wrap;
   margin-right: 200px;
@@ -250,3 +253,14 @@ aside{
   background-color: #343a2c;
 }
 
+.carrinho{
+  margin-top: 50px;
+  background-color: rgba(57, 99, 4, 0.22);
+  width: 400px;
+  height: auto;
+  float: right;
+}
+
+.table, th, td{
+  height: auto;
+}
