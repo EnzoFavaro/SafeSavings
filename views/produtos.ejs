@@ -39,7 +39,7 @@
                     <img src="./images/logo-empresa.svg" alt="logo SafeSavings">
                 </div>
             </div>
-            <div class="filtros">
+            <aside class="filtro">
                 <h2 class="titulo-filtros">Filtros</h2>
                 <h4 class="tipo-filtros">Categoria</h4>
                 <form class="form-filtros" action="">
@@ -82,23 +82,108 @@
                     <br>
                     <input class="btn-filtros" type="submit" value="Aplicar filtros">
                 </form>
-            </div>
+            </aside>
+            <aside class="carrinho">
+                <h2 style="text-align: center;"> Carrinho </h2>
+                <table class="table">
+                    <br>
+                    <br>
+                    <br>
+                    <tr>
+                        <th style="text-align: left; width: 90%;">Produto</th>
+                        <th style="text-align:center">Quantidade</th>
+                        <th>Preço</th>
+                        <tr><td><img src="./images/linha.svg" style="height: 40px;"></td></tr>
+
+                    </tr>
+
+                    <% 
+                    if(cart.length > 0)
+                    {
+                        let total = 0;
+
+                        cart.forEach(item => {
+                    %>
+                    <tr>
+                        <td style="font-weight: 900;"><%= item.product_name %></td>
+                        <td><%= item.quantity %></td>
+                        <td>R$<%= item.price %></td>
+                        <td><button type="button" style=" margin-left: 10px; cursor: pointer; padding-top: 5px; border: none; background-color: rgba(255, 255, 255, 0);" onclick="remove_item(<%= item.product_id %>)"><img style="height: 25px; width: 25px;" src="./images/remove.png"></button></td>
+                    </tr>
+                    <%
+                            total += parseFloat(item.quantity) * parseFloat(item.price);
+                        })
+                    %>
+                    <tr><td><img src="./images/linha.svg" style="height: 40px;"></td></tr>
+                    <tr>
+                        
+                        <td colspan="3" aling="right"><b>Total</b></td>
+
+                        
+
+                        <td>R$<%= total %></td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <%
+                    }
+                    else
+                    {
+                    %>
+
+                    <tr>
+                        <td align="center">Carrinho Vazio</td>
+                    </tr>
+
+                    <%
+                    }
+                    %>
+                </table>
+                <div id="comprar_container"><button id="btn_comprar">Comprar</button></div>
+            </aside>
+            <div class="products">
             <% products.forEach(product => { %>
-                    <img src="/images/<%= product.product_image %>"/>
-                    <h4><b><%= product.product_name %></b></h4>
+                <div class="product_item">
+                    <div id="prod_header">
+                        <h3><b><%= product.product_name %></b></h3>
+                        <h3 <%if(product.EE_label == "A"){ %>
+                            style="color: #6dc700;" <%}else if(product.EE_label == "B"){ %>
+                            style="color: #ffee03;" <%} else if(product.EE_label == "C"){%>
+                            style="color: #da0000;" <%}%>
+                        ><b><%= product.EE_label %></b></h3>  
+                    </div>
+                    <img src="./products/<%=product.category%>.png"/>
+                    <div class="product_info">
+                        <h4><b>R$<%= product.price %></b></h4>
+                        <h4><b>Eficiência: <%= product.efficiency %></b></h4>
+                    </div>
                     <form method="post" action="/add_cart">
-                        <input type="hidden" name="product_id" value="<%= product.product_id %>" />
+                        <input type="hidden" id="product_id" name="product_id" value="<%= product.product_id %>" />
 
-                        <input type="hidden" name="product_name" value="<%= product.product_name %>" />
+                        <input type="hidden" id="product_name" name="product_name" value="<%= product.product_name %>" />
 
-                        <input type="hidden" name="price" value="<%= product.price %>" />
+                        <input type="hidden" id="price" name="price" value="<%= product.price %>" />
 
-                        <input type="submit" class="btn btn-warning" value="Add to Cart" />
+                        <input type="submit" class="product-btn" value="Adicionar ao carrinho" />
                     </form>
                 </div>
                 <% }) %>
+            </div>
+            
+
+    </div>   
         </main>
     </div>
 </body>
 
 </html>
+<script>
+
+    function remove_item(item_id)
+    {
+        if(confirm("Quer realmente remover esse item?"))
+        {
+            window.location.href = `/remove_item?id=${item_id}`;
+        }
+    }
+
+</script>
