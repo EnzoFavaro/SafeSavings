@@ -138,7 +138,7 @@
                     }
                     %>
                 </table>
-                <div id="comprar_container"><button id="btn_comprar">Comprar</button></div>
+                <div id="comprar_container"><button id="btn_comprar" onclick="window.location.href = '/checkout';">Comprar</button></div>
             </aside>
             <div class="products">
             <% products.forEach(product => { %>
@@ -157,9 +157,13 @@
                         <h4><b>Eficiência: <%= product.efficiency %></b></h4>
                     </div>
                     <form method="post" action="/add_cart">
+                        <input type="hidden" id="product_category" name="product_category" value="<%= product.category %>" />
+
                         <input type="hidden" id="product_id" name="product_id" value="<%= product.product_id %>" />
 
                         <input type="hidden" id="product_name" name="product_name" value="<%= product.product_name %>" />
+
+                        <input type="hidden" id="product_efficiency" name="product_efficiency" value="<%= product.efficiency %>" />
 
                         <input type="hidden" id="price" name="price" value="<%= product.price %>" />
 

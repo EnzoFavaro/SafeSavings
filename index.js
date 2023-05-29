@@ -7,7 +7,7 @@ const body_parser = require('body-parser');
 const cookie = require('cookie-parser');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 app.use(body_parser.urlencoded({ extended : false }));
 app.use(body_parser.json());
 
@@ -55,11 +55,34 @@ app.get("/produtos",loggedIn ,fetchProducts,(req, res) =>{
 
 app.post('/add_cart', (request, response) => {
 
+	const product_category = request.body.product_category;
 	const product_id = request.body.product_id;
 	const product_name = request.body.product_name;
-
+	const product_efficiency = request.body.product_efficiency;
 	const price = request.body.price;
 
+	let Fmult;
+	let desconto;
+    if(product_category == "aquecedores"){
+        Fmult = 1;
+    }if (product_category == "fogao"){
+        Fmult = 1.5;
+    }if (product_category == "microondas"){
+        Fmult = 0.8;
+    }if (product_category == "lampadas"){
+        Fmult = 0.03;
+    }if (product_category == "lava e seca"){
+        Fmult = 7;
+    }if (product_category == "Ventilador"){
+        Fmult = 0.5;
+    }if (product_category == "televisores"){
+        Fmult = 5;
+    }if (product_category == "geladeiras"){
+        Fmult = 10;
+	}
+
+	desconto = product_efficiency *Fmult;
+    
 	let count = 0;
 
 	for(let i = 0; i < request.session.cart.length; i++)
@@ -77,8 +100,11 @@ app.post('/add_cart', (request, response) => {
 	if(count === 0)
 	{
 		const cart_data = {
+			product_category: product_category,
 			product_id : product_id,
 			product_name : product_name,
+			product_efficiency: product_efficiency,
+			product_desconto: desconto,
 			price : parseFloat(price),
 			quantity : 1
 		};
@@ -105,3 +131,20 @@ app.get('/remove_item', (request, response) => {
 	response.redirect("/produtos");
 
 });
+
+app.get('/checkout',loggedIn , (req, res) => {
+
+	if(req.user){
+		if(req.session.cart)
+	{
+		req.checkout = req.session.cart
+	}
+		
+		res.render("checkout", {status:"LoggedIn", user: req.user ,  checkout_cart : req.checkout});
+	  } else{
+
+		//o que fazer se ele montou carrinho e não esta logado??
+		// res.render("produtos", {status:"Not loggedIn", user:"nothing" , products : req.products, cart : req.session.cart})
+	  }
+
+})
