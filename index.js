@@ -10,6 +10,7 @@ const session = require('express-session');
 const PORT = process.env.PORT || 3000;
 app.use(body_parser.urlencoded({ extended : false }));
 app.use(body_parser.json());
+const jwt = require("jsonwebtoken");
 
 
 //ferramentas do servidor
@@ -147,4 +148,42 @@ app.get('/checkout',loggedIn , (req, res) => {
 		// res.render("produtos", {status:"Not loggedIn", user:"nothing" , products : req.products, cart : req.session.cart})
 	  }
 
+})
+
+app.get('/buy', loggedIn, (req, res) =>{
+	if(req.user){
+		if(req.session.cart){
+			
+
+			const product_id = req.body.product_id;
+			const product_efficiency = req.body.product_efficiency;
+
+
+			let EE_rate_new = 0;
+			let count = 0;
+
+		for(let i = 0; i < req.session.cart.length; i++){
+			EE_rate_new = EE_rate_new + parseFloat(req.session.cart[i].product_efficiency)
+			count ++;
+		}
+
+		EE_rate_new = EE_rate_new/count;
+		
+			try{
+				const decoded = jwt.verify(req.cookies.userRegistered, process.env.JWT_SECRET);
+				db.query('SELECT EE_rate FROM users WHERE id = ?',[decoded.id],(err, result) =>{
+					if(err) return err;
+				resultado = result[0].EE_rate
+				EE_rate_new = (EE_rate_new+resultado)/2
+				
+				db.query('UPDATE users SET EE_rate = ? WHERE id = ?',[EE_rate_new,decoded.id],(err, result) =>{
+					if(err) return err;
+					res.render("index", {status:"LoggedIn", user: req.user});
+				})
+				})
+			} catch (err){
+				if(err) console.log(err);
+			}
+		}
+	}
 })

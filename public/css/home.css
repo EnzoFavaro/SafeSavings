@@ -67,6 +67,7 @@ body{
 .main{
     background-color: #39422F;
     width: 100%;
+    min-height: 847px;
 }
 
 .sobre-nos-titulo{
@@ -231,12 +232,12 @@ body{
     background-color: white;
     border-radius: 15px;
     margin-top: 50px;
-    margin-right: 10%;
     display: flex;
     flex-direction: column;
     height:fit-content;
     padding-bottom: 10px;
     margin-bottom: 25px;
+    margin-left: 10%;
 }
 
 
@@ -283,3 +284,50 @@ body{
     display: flex;
     justify-content: center;
   }
+
+  .checkout_options{
+    background-color: white;
+    border-radius: 15px;
+    margin-top: 50px;
+    margin-right: 8%;
+    height: 100%;
+    width: 400px;
+
+  }
+  .desconto_options{
+    margin-bottom: 20px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  .desconto_option{
+    color: #1e2c0d;
+    
+  }
+  input[type='radio']:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #d1d3d1;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+input[type='radio']:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #1e2c0d;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}

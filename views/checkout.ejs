@@ -40,6 +40,7 @@
                     <br>
                     <p>&emsp;&emsp; Faça parte do movimento SafeSaving e junte-se a nós na busca por um consumo consciente e econômico. Além de economizar, você estará contribuindo para a preservação do meio ambiente.</p>
                 </div>
+
             <div id="checkout_box">
                 <h1 style="color: black; text-align: center; font-weight: bolder; font-size:xx-large; margin-top: 10px;"> Meu carrinho</h1>
                 
@@ -75,12 +76,12 @@
                     %>
                     <tr>
                         <td colspan="3" style="padding-left: 10px;" aling="right"><b>Subtotal</b></td>
-                        <td>R$<%= total %></td>
+                        <td id="valor_total">R$<%= total %></td>
                         <td>&nbsp;</td>
                     </tr>
                     <tr>
-                        <td colspan="3" style="padding-left: 10px;" aling="right"><b>Descontos</b></td>
-                        <td>R$<%= total_desconto %></td>
+                        <td colspan="3" style="padding-left: 10px;" aling="right"><b id="resposta_js">Descontos</b></td>
+                        <td id="resposta_js_valor">R$<%= total_desconto %></td>
                         <td>&nbsp;</td>
                     </tr>
 
@@ -88,7 +89,7 @@
                     
                     <tr>
                         <td colspan="3" style="padding-left: 10px;" aling="right"><h3>Total</h3></td>
-                        <td><h3>R$<%= total_final %></h3></td>
+                        <td><h3 id="valor_total_final" >R$<%= total_final %></h3></td>
                         <td>&nbsp;</td>
                     </tr>
 
@@ -106,14 +107,30 @@
                     }
                     %>
                 </table>
-                <div id="comprar_container"><button id="btn_comprar" onclick="window.location.href = '/checkout';">Comprar</button></div>
+                <div id="comprar_container"><button id="btn_comprar" onclick="window.location.href = '/buy';">Comprar</button></div>
 
             
             </div>
+
+            <div class="checkout_options">
+                <div class="desconto_options">
+                <h2 style="text-align: center; margin-top: 10px;">Opções</h2>
+                <tr><td style="padding-left:10px;"><img src="./images/linha.svg" style="height: 40px;"></td></tr>
+                <h3>Opções de desconto:</h3><br>
+                <label class="desconto_option"><input type="radio" name="desconto_option" value="desconto" checked><b>  Desconto - </b> Você receberá um desconto em sua compra</label>
+                <br>
+                <label class="desconto_option"><input type="radio" name="desconto_option" value="cashback"><b>  Cashback - </b>Você receberá um cashback na plataforma para gastar em futuras compras</label>
+                <br>
+                <label class="desconto_option"><input type="radio" name="desconto_option" value="doar"><b>  Doar o desconto - </b>Doe o valor do desconto para instituições beneficentes que apoiam causas sustentaveis</label>
+                </div>
             </div>
-    
+        </div>
+        <% 
+        
+        %>
         </section>
     </div>
 </body>
-
+<script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="./js/checkout.js"></script>
 </html>
