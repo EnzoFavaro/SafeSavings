@@ -23,6 +23,7 @@ app.use(cookie());
 app.use(express.json());
 const fetchProducts = require('./controllers/fetchProducts');
 const loggedIn = require("./controllers/loggedIn");
+const { render } = require('ejs');
 db.connect((err) =>{
   if(err) throw err;
 });
@@ -187,3 +188,23 @@ app.get('/buy', loggedIn, (req, res) =>{
 		}
 	}
 })
+// routes.js
+
+// ...
+
+app.get('/ranking', (req, res) => {
+	const query = 'SELECT * FROM users ORDER BY EE_rate DESC LIMIT 10';
+	db.query(query, (err, results) => {
+	  if (err) {
+		console.error('Erro ao buscar o ranking: ', err);
+		res.status(500).json({ error: 'Erro ao buscar o ranking.' });
+		return;
+
+
+	  }
+	  req.results = results;  
+	  res.render("ranking",{results : req.results});	
+	});
+  });
+  
+  
