@@ -169,7 +169,7 @@ app.get('/buy', loggedIn, (req, res) =>{
 		}
 
 		EE_rate_new = EE_rate_new/count;
-		
+		req.session.cart = [];
 			try{
 				const decoded = jwt.verify(req.cookies.userRegistered, process.env.JWT_SECRET);
 				db.query('SELECT EE_rate FROM users WHERE id = ?',[decoded.id],(err, result) =>{

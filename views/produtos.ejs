@@ -42,30 +42,30 @@
             <aside class="filtro">
                 <h2 class="titulo-filtros">Filtros</h2>
                 <h4 class="tipo-filtros">Categoria</h4>
-                <form class="form-filtros" action="">
+                <form class="form-filtros" name="form_products" action="">
                     <div class="categoria">
-                        <input type="checkbox" name="aquecedores" id="aquecedores">
+                        <input type="checkbox" name="produtos" value="aquecedores">
                         <label for="aquecedores">Aquecedores</label>
                         <br>
-                        <input type="checkbox" name="fogao" id="fogao">
+                        <input type="checkbox" name="produtos" value="fogao">
                         <label for="fogao">Fogão</label>
                         <br>
-                        <input type="checkbox" name="microondas" id="microondas">
+                        <input type="checkbox" name="produtos" value="microondas" >
                         <label for="microondas">Micro-ondas</label>
                         <br>
-                        <input type="checkbox" name="lampadas" id="lampadas">
+                        <input type="checkbox" name="produtos" value="lampadas">
                         <label for="lampadas">Lâmpadas</label>
                         <br>
-                        <input type="checkbox" name="lavaESseca" id="lavaESeca">
+                        <input type="checkbox" name="produtos" value="lavaESeca">
                         <label for="lavaESeca">Lava e Seca</label>
                         <br>
-                        <input type="checkbox" name="Ventilador" id="Ventilador">
+                        <input type="checkbox" name="produtos" value="Ventilador">
                         <label for="Ventilador">Ventilador</label>
                         <br>
-                        <input type="checkbox" name="televisores" id="televisores">
+                        <input type="checkbox" name="produtos" value="televisores">
                         <label for="televisores">Televisores</label>
                         <br>
-                        <input type="checkbox" name="geladeiras" id="geladeiras">
+                        <input type="checkbox" name="produtos" value="geladeiras">
                         <label for="geladeiras">Geladeiras</label>
                     </div>
                 </form>
@@ -180,6 +180,7 @@
 </body>
 
 </html>
+<script type="text/javascript" src="/js/filter.js"></script>
 <script>
 
     function remove_item(item_id)
